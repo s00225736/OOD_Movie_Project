@@ -8,16 +8,17 @@
         Title="MainWindow" Height="502" Width="800">
     <Grid>
         <Rectangle HorizontalAlignment="Left" Height="486" Stroke="Black" VerticalAlignment="Center" Width="246"/>
-        <Image x:Name="imgPoster1" HorizontalAlignment="Left" Height="169" Margin="264,92,0,0" VerticalAlignment="Top" Width="79"/>
-        <Image x:Name="imgPoster2" HorizontalAlignment="Left" Height="169" Margin="367,92,0,0" VerticalAlignment="Top" Width="80"/>
-        <Image x:Name="imgPoster3" HorizontalAlignment="Left" Height="169" Margin="485,92,0,0" VerticalAlignment="Top" Width="79"/>
-        <Image x:Name="imgPoster6" HorizontalAlignment="Left" Height="169" Margin="264,311,0,0" VerticalAlignment="Top" Width="79"/>
-        <Image x:Name="imgPoster7" HorizontalAlignment="Left" Height="169" Margin="367,311,0,0" VerticalAlignment="Top" Width="80"/>
-        <Image x:Name="imgPoster8" HorizontalAlignment="Left" Height="169" Margin="485,311,0,0" VerticalAlignment="Top" Width="79"/>
-        <Image x:Name="imgPoster4" HorizontalAlignment="Left" Height="169" Margin="601,92,0,0" VerticalAlignment="Top" Width="79"/>
-        <Image x:Name="imgPoster5" HorizontalAlignment="Left" Height="169" Margin="711,92,0,0" VerticalAlignment="Top" Width="79"/>
-        <Image x:Name="imgPoster9" HorizontalAlignment="Left" Height="169" Margin="601,311,0,0" VerticalAlignment="Top" Width="79"/>
-        <Image x:Name="imgPoster10" HorizontalAlignment="Left" Height="169" Margin="711,311,0,0" VerticalAlignment="Top" Width="79"/>
+        <Image Source="MovieImgs/Ran_1985.jpg" Width="100" Height="100" />
+        <Image Source="MovieImgs/magnolia" Width="100" Height="100" />
+        <Image Source="MovieImgs/BladeRunner" Width="100" Height="100" />
+        <Image Source="MovieImgs/your_image.png" Width="100" Height="100" />
+        <Image Source="MovieImgs/your_image.png" Width="100" Height="100" />
+        <Image Source="MovieImgs/your_image.png" Width="100" Height="100" />
+        <Image Source="MovieImgs/your_image.png" Width="100" Height="100" />
+        <Image Source="MovieImgs/your_image.png" Width="100" Height="100" Margin="462,193,238,193" />
+
+
+
         <TextBox x:Name="txbSearch" HorizontalAlignment="Left" Height="34" Margin="367,25,0,0" TextWrapping="Wrap" Text="Search Bar" VerticalAlignment="Top" Width="312"/>
 
     </Grid>
