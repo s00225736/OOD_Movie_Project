@@ -24,5 +24,18 @@ namespace OOD_Movie_Project
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Model1Container DB = new Model1Container();
+
+            //Movies
+            var query1 = from b in DB.Movies
+                         select b;
+
+            var results = query1.ToList();
+
+            lbxMovies.ItemsSource = results;
+        }
     }
 }

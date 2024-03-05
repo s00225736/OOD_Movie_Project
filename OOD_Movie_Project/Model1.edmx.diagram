@@ -6,6 +6,8 @@
     <edmx:Diagrams>
       <Diagram DiagramId="8385cad9437743f38fc41bb438d32701" Name="Diagram1" >
         <EntityTypeShape EntityType="Model1.Movie" Width="1.5" PointX="4.25" PointY="1.625" />
+        <EntityTypeShape EntityType="Model1.Review" Width="1.5" PointX="7.5" PointY="1.625" />
+        <AssociationConnector Association="Model1.MovieReview" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

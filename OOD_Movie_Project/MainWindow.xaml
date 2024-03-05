@@ -5,21 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OOD_Movie_Project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="502" Width="800">
+        Title="MainWindow" Height="502" Width="800" Loaded="Window_Loaded">
+
+    <Window.Resources>
+        <DataTemplate x:Key="dataTemplateMovies">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{Binding Path=MovieImags}" Width="100"/>
+                <TextBlock Text="{Binding Path=Name}" FontSize="18" Margin="20"
+                           VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="dataTemplateReviews">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding Path=Name}" FontSize="18" Margin="20"
+                  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+
     <Grid>
-        <Rectangle HorizontalAlignment="Left" Height="486" Stroke="Black" VerticalAlignment="Center" Width="246"/>
-        <Image Source="MovieImgs/Ran_1985.jpg" Width="100" Height="100" />
-        <Image Source="MovieImgs/magnolia" Width="100" Height="100" />
-        <Image Source="MovieImgs/BladeRunner" Width="100" Height="100" />
-        <Image Source="MovieImgs/your_image.png" Width="100" Height="100" />
-        <Image Source="MovieImgs/your_image.png" Width="100" Height="100" />
-        <Image Source="MovieImgs/your_image.png" Width="100" Height="100" />
-        <Image Source="MovieImgs/your_image.png" Width="100" Height="100" />
-        <Image Source="MovieImgs/your_image.png" Width="100" Height="100" Margin="462,193,238,193" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="400*"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
 
-
-
-        <TextBox x:Name="txbSearch" HorizontalAlignment="Left" Height="34" Margin="367,25,0,0" TextWrapping="Wrap" Text="Search Bar" VerticalAlignment="Top" Width="312"/>
+        <ListBox Name="lbxMovies" Grid.Column="0" Grid.Row="0" Margin="20,20,20,20"
+                 ItemTemplate="{StaticResource dataTemplateMovies}"/>
 
     </Grid>
 </Window>
