@@ -8,7 +8,7 @@
         Title="MainWindow" Height="502" Width="800" Loaded="Window_Loaded">
 
     <Window.Resources>
-        <DataTemplate x:Key="dataTemplateMovies">
+        <!--<DataTemplate x:Key="dataTemplateMovies">
             <StackPanel Orientation="Horizontal">
                 <Image Source="{Binding Path=MovieImags}" Width="100"/>
                 <TextBlock Text="{Binding Path=Name}" FontSize="18" Margin="20"
@@ -21,22 +21,18 @@
                 <TextBlock Text="{Binding Path=Name}" FontSize="18" Margin="20"
                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
             </StackPanel>
-        </DataTemplate>
+        </DataTemplate>-->
     </Window.Resources>
 
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="0*"/>
-        </Grid.ColumnDefinitions>
-        <Grid>
+        <!--<Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="400*"/>
             </Grid.ColumnDefinitions>
         </Grid>
 
         <ListBox Name="lbxMovies" Grid.Column="0" Grid.Row="0" Margin="20,20,20,20"
-                 ItemTemplate="{StaticResource dataTemplateMovies}"/>
+                 ItemTemplate="{StaticResource dataTemplateMovies}"/>-->
 
     </Grid>
 </Window>
