@@ -24,10 +24,5 @@ namespace OOD_Movie_Project
         {
             InitializeComponent();
         }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            
-        }
     }
 }

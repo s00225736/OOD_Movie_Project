@@ -5,34 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OOD_Movie_Project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="502" Width="800" Loaded="Window_Loaded">
+        Title="MainWindow" Height="502" Width="800">
 
     <Window.Resources>
-        <!--<DataTemplate x:Key="dataTemplateMovies">
-            <StackPanel Orientation="Horizontal">
-                <Image Source="{Binding Path=MovieImags}" Width="100"/>
-                <TextBlock Text="{Binding Path=Name}" FontSize="18" Margin="20"
-                           VerticalAlignment="Center" HorizontalAlignment="Center"/>
-            </StackPanel>
-        </DataTemplate>
-
-        <DataTemplate x:Key="dataTemplateReviews">
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="{Binding Path=Name}" FontSize="18" Margin="20"
-                  VerticalAlignment="Center" HorizontalAlignment="Center"/>
-            </StackPanel>
-        </DataTemplate>-->
     </Window.Resources>
 
     <Grid>
-        <!--<Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="400*"/>
-            </Grid.ColumnDefinitions>
-        </Grid>
-
-        <ListBox Name="lbxMovies" Grid.Column="0" Grid.Row="0" Margin="20,20,20,20"
-                 ItemTemplate="{StaticResource dataTemplateMovies}"/>-->
 
     </Grid>
 </Window>

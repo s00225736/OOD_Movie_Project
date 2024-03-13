@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 using System.Data.Entity.Migrations.Model;
 using System.Linq;
@@ -10,13 +11,14 @@ namespace OOD_Movie_Project
 {
     public class MovieReview
     {
+        [Key]
         public int ReviewID { get; set; }
 
         public string ReviewerName { get; set; }
 
         public string ReviewDesc {  get; set; }
 
-        public int MoviesID {  get; set; }
+        public int MovieID {  get; set; }
 
         public virtual Movies Movie { get; set; }
 
@@ -30,23 +32,26 @@ namespace OOD_Movie_Project
 
     public class Movies
     {
+        [Key]
         public int MovieID { get; set; }
 
         public string MovieName { get; set; }
 
+        public string Director { get; set; }
+
         public int Date { get; set; }
 
-        public string descriptions { get; set; }
+        public string Descriptions { get; set; }
 
         public string MovieImg { get; set; }
     }
 
     public class MovieData : DbContext
     {
-        public MovieData(string databaseName) :base(databaseName) { }
+        public MovieData() :base("MovieProject") { }
 
-        public DbSet<MovieReview> movieReviews { get; set;}
+        public DbSet<MovieReview> MovieReviews { get; set;}
 
-        public DbSet<Movies> movies { get; set;}
+        public DbSet<Movies> Movies { get; set;}
     }
 }
