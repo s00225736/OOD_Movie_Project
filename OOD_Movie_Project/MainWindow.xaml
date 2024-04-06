@@ -11,6 +11,18 @@
     </Window.Resources>
 
     <Grid>
+        <Image x:Name="BladeRunner" HorizontalAlignment="Left" Height="192" Margin="471,264,0,0" VerticalAlignment="Top" Width="111"/>
+        <Image x:Name="Casablanca" HorizontalAlignment="Left" Height="192" Margin="641,264,0,0" VerticalAlignment="Top" Width="111"/>
+        <Image x:Name="Dune_2" HorizontalAlignment="Left" Height="192" Margin="329,264,0,0" VerticalAlignment="Top" Width="111"/>
+        <Image x:Name="Godfather" HorizontalAlignment="Left" Height="192" Margin="181,264,0,0" VerticalAlignment="Top" Width="111"/>
+        <Image x:Name="Killers_Of_The_Flower_Moon" HorizontalAlignment="Left" Height="192" Margin="31,264,0,0" VerticalAlignment="Top" Width="111"/>
+        <Image x:Name="Monty_Python_and_the_Holy_Grail" HorizontalAlignment="Left" Height="192" Margin="31,48,0,0" VerticalAlignment="Top" Width="111"/>
+        <Image x:Name="Oppenheimer" HorizontalAlignment="Left" Height="192" Margin="641,48,0,0" VerticalAlignment="Top" Width="111"/>
+        <Image x:Name="Ran" HorizontalAlignment="Left" Height="192" Margin="471,48,0,0" VerticalAlignment="Top" Width="111"/>
+        <Image x:Name="Indiana_Jones_Raider_Of_The_Lost_Ark" HorizontalAlignment="Left" Height="192" Margin="329,48,0,0" VerticalAlignment="Top" Width="111"/>
+        <Image x:Name="Star_Wars_Revenge_Of_The_Sith" HorizontalAlignment="Left" Height="192" Margin="181,48,0,0" VerticalAlignment="Top" Width="111"/>
 
     </Grid>
 </Window>
+    
+    
