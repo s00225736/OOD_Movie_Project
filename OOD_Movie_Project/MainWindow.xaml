@@ -5,15 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OOD_Movie_Project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="502" Width="800">
+        Title="MainWindow" Height="502" Width="800"
+        Loaded="Window_Loaded">
 
     <Window.Resources>
     </Window.Resources>
 
     <Grid>
         <Image x:Name="BladeRunner" HorizontalAlignment="Left" Height="192" Margin="471,264,0,0" VerticalAlignment="Top" Width="111"/>
-        <Image x:Name="Casablanca" HorizontalAlignment="Left" Height="192" Margin="641,264,0,0" VerticalAlignment="Top" Width="111"/>
-        <Image x:Name="Dune_2" HorizontalAlignment="Left" Height="192" Margin="329,264,0,0" VerticalAlignment="Top" Width="111"/>
+        <Image x:Name="imgCasablanca" HorizontalAlignment="Left" Height="192" Margin="641,264,0,0" VerticalAlignment="Top" Width="111"/>
+        <Image x:Name="imgDune_2" HorizontalAlignment="Left" Height="192" Margin="329,264,0,0" VerticalAlignment="Top" Width="111"/>
         <Image x:Name="Godfather" HorizontalAlignment="Left" Height="192" Margin="181,264,0,0" VerticalAlignment="Top" Width="111"/>
         <Image x:Name="Killers_Of_The_Flower_Moon" HorizontalAlignment="Left" Height="192" Margin="31,264,0,0" VerticalAlignment="Top" Width="111"/>
         <Image x:Name="Monty_Python_and_the_Holy_Grail" HorizontalAlignment="Left" Height="192" Margin="31,48,0,0" VerticalAlignment="Top" Width="111"/>
