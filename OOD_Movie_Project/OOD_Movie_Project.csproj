@@ -103,8 +103,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MovieDetailsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MovieDetailsPage.xaml.cs">
+      <DependentUpon>MovieDetailsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MovieReview.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -134,16 +141,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="MovieImags\bladeRunner.jpg" />
-    <Resource Include="MovieImags\Casablanca.jpg" />
-    <Resource Include="MovieImags\Dune_2.jpg" />
-    <Resource Include="MovieImags\godfather.png" />
-    <Resource Include="MovieImags\killers_of_the_flower_moon_poster.jpg" />
-    <Resource Include="MovieImags\monty_python_and_the_holy_grail.jpg" />
-    <Resource Include="MovieImags\oppenheimer-movie-poster.jpg" />
-    <Resource Include="MovieImags\Raiders_of_the_lost_ark.jpg" />
-    <Resource Include="MovieImags\Ran_1985.jpg" />
-    <Resource Include="MovieImags\star_wars_Revenge_Of_The_Sith_jpg.jpg" />
+    <Resource Include="images\bladeRunner.jpg" />
+    <Resource Include="images\Casablanca.jpg" />
+    <Resource Include="images\Dune_2.jpg" />
+    <Resource Include="images\godfather.png" />
+    <Resource Include="images\killers_of_the_flower_moon_poster.jpg" />
+    <Resource Include="images\monty_python_and_the_holy_grail.jpg" />
+    <Resource Include="images\oppenheimer-movie-poster.jpg" />
+    <Resource Include="images\Raiders_of_the_lost_ark.jpg" />
+    <Resource Include="images\Ran_1985.jpg" />
+    <Resource Include="images\star_wars_Revenge_Of_The_Sith_jpg.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
