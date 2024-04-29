@@ -19,13 +19,38 @@ namespace OOD_Movie_Project
     /// </summary>
     public partial class MovieDetailsPage : Window
     {
-        private string _id;
+        private MovieData _db = new MovieData();
+        private int _movieID;
 
-        public MovieDetailsPage(string tag)
+        public MovieDetailsPage(int movieID)
         {
             InitializeComponent();
-            _id = tag;
-            this.Title = tag;
+
+            _movieID = movieID;
+            this.Title = "Movie Details";
+
+            LoadMovieDetails();
         }
+
+        public void LoadMovieDetails()
+        {
+            var movie = _db.Movies.FirstOrDefault(m => m.MovieID == _movieID);
+            if(movie != null)
+            {
+                imgPoster.Source = new BitmapImage(new Uri(movie.MovieImg, UriKind.RelativeOrAbsolute));
+                tblkName.Text = movie.MovieName;
+                tblkDescription.Text = movie.Descriptions;
+
+                var reviews = _db.MovieReviews.Where(r => r.MovieID == _movieID).ToList();
+                StringBuilder sb = new StringBuilder();
+                foreach(var review in reviews)
+                {
+                    sb.AppendLine($"{review.ReviewerName}: {review.ReviewDesc}");
+                }
+                tblkReviews.Text = sb.ToString();
+            }
+        }
+
+        
     }
 }

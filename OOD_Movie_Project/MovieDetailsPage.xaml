@@ -8,6 +8,10 @@
         Title="MovieDetailsPage" Height="350" Width="600"
         WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Image x:Name="imgPoster" HorizontalAlignment="Left" Height="157" Margin="18,10,0,0" VerticalAlignment="Top" Width="97" Source="{Binding MovieImg}"/>
+        <TextBlock x:Name="tblkName" HorizontalAlignment="Left" Height="40" Margin="146,10,0,0" TextWrapping="Wrap" Text="{Binding MovieName}" VerticalAlignment="Top" Width="180"/>
+        <TextBlock x:Name="tblkDescription" HorizontalAlignment="Left" Height="104" Margin="146,72,0,0" TextWrapping="Wrap" Text="{Binding Description}" VerticalAlignment="Top" Width="180"/>
+        <TextBlock x:Name="tblkReviews" HorizontalAlignment="Left" Height="283" Margin="376,30,0,0" TextWrapping="Wrap" Text="{Binding Reviews}" VerticalAlignment="Top" Width="214"/>
+
     </Grid>
 </Window>
