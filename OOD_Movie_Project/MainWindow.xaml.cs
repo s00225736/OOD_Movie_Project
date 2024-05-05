@@ -36,12 +36,27 @@ namespace OOD_Movie_Project
 
             DataContext = this;
 
-            Movies m1 = new Movies() { MovieID = 1, MovieName = "Casablanca", Director = "Michael Curtiz", Date = 23 / 01 / 1943, Descriptions = "During WWII, Rick, a nightclub owner in Casablanca, agrees to help his former lover Ilsa and her husband. Soon, Ilsa's feelings for Rick resurface and she finds herself renewing her love for him.", MovieImg = "/images/Casablanca.jpg" };
-            Movies m2 = new Movies() { MovieID = 2, MovieName = "Blade Runner", Director = "Ridley Scott", Date = 25 / 06 / 1982, Descriptions = "Rick Deckard, an ex-policeman, becomes a special agent with a mission to exterminate a group of violent androids. As he starts getting deeper into his mission, he questions his own identity.", MovieImg = "/images/bladeRunner.jpg" };
+            Movies m1 = new Movies() {MovieImg = "/images/Casablanca.jpg" };
+            Movies m2 = new Movies() { MovieImg = "/images/BladeRunner.jpg" };
+            Movies m3 = new Movies() { MovieImg = "/images/Dune_2.jpg" };
+            Movies m4 = new Movies() { MovieImg = "/images/Raiders_of_the_lost_ark.jpg" };
+            Movies m5 = new Movies() { MovieImg = "/images/Ran_1985.jpg" };
+            Movies m6 = new Movies() { MovieImg = "/images/star_wars_Revenge_Of_The_Sith_jpg.jpg" };
+            Movies m7 = new Movies() { MovieImg = "/images/oppenheimer-movie-poster.jpg" };
+            Movies m8 = new Movies() { MovieImg = "/images/monty_python_and_the_holy_grail.jpg" };
+            Movies m9 = new Movies() { MovieImg = "/images/killers_of_the_flower_moon_poster.jpg" };
+            Movies m10 = new Movies() { MovieImg = "/images/godfather.png" };
 
             AllMovies.Add(m1);
             AllMovies.Add(m2);
-
+            AllMovies.Add(m3);
+            AllMovies.Add(m4);
+            AllMovies.Add(m5);
+            AllMovies.Add(m6);
+            AllMovies.Add(m7);
+            AllMovies.Add(m8);
+            AllMovies.Add(m9);
+            AllMovies.Add(m10);
 
             // Simulated database query result
             //    List<string> imageUrls = new List<string>
@@ -65,12 +80,32 @@ namespace OOD_Movie_Project
         private void DisplayMovieDetails(object sender, MouseButtonEventArgs e)
         {
             Image selectedImage = sender as Image;
-            string tag = selectedImage.Tag.ToString();
 
-            Movies selectedMovie = AllMovies.FirstOrDefault(m => m.MovieID.ToString() == tag);
+            if(selectedImage != null && selectedImage.Tag != null)
+            {
+                string tag = selectedImage.Tag.ToString();
 
-            MovieDetailsPage movieDetailsPage = new MovieDetailsPage(selectedMovie.MovieID);
-            movieDetailsPage.ShowDialog();
+                Movies selectedMovie = AllMovies.FirstOrDefault(m => m.MovieID.ToString() == tag);
+                if(selectedMovie  != null)
+                {
+                    try
+                    {
+                        MovieDetailsPage movieDetailsPage = new MovieDetailsPage(selectedMovie.MovieID);
+                        movieDetailsPage.ShowDialog();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"An error occurred: {ex.Message}","Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Selected movie not found.", "Error",MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+
+                
+            }
+            
         }
     }
 }
