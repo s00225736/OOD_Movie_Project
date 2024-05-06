@@ -20,7 +20,6 @@ namespace OOD_Movie_Project
     /// </summary>
     public partial class MainWindow : Window
     {
-        public List<string> ImageUrls { get; set; }
         public List<Movies> AllMovies { get; set; }
 
         //MovieData db = new MovieData();
@@ -57,53 +56,22 @@ namespace OOD_Movie_Project
             AllMovies.Add(m8);
             AllMovies.Add(m9);
             AllMovies.Add(m10);
-
-            // Simulated database query result
-            //    List<string> imageUrls = new List<string>
-            //{
-            //    "/images/bladeRunner.jpg",
-            //    "/images/Casablanca.jpg",
-            //    "/images/Dune_2.jpg",
-            //    "/images/godfather.png",
-            //    "/images/killers_of_the_flower_moon_poster.jpg",
-            //    "/images/monty_python_and_the_holy_grail.jpg",
-            //    "/images/oppenheimer-movie-poster.jpg",
-            //    "/images/Raiders_of_the_lost_ark.jpg",
-            //    "/images/Ran_1985.jpg",
-            //    "/images/star_wars_Revenge_Of_The_Sith_jpg.jpg"
-            //    // Add more URLs as needed
-            //};
-
-            //    ImageUrls = imageUrls;
         }
 
         private void DisplayMovieDetails(object sender, MouseButtonEventArgs e)
         {
             Image selectedImage = sender as Image;
 
-            if(selectedImage != null && selectedImage.Tag != null)
+            if (selectedImage != null && selectedImage.Tag != null)
             {
                 string tag = selectedImage.Tag.ToString();
 
                 Movies selectedMovie = AllMovies.FirstOrDefault(m => m.MovieID.ToString() == tag);
-                if(selectedMovie  != null)
+                if (selectedMovie != null)
                 {
-                    try
-                    {
-                        MovieDetailsPage movieDetailsPage = new MovieDetailsPage(selectedMovie.MovieID);
-                        movieDetailsPage.ShowDialog();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"An error occurred: {ex.Message}","Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                    }
+                    MovieDetailsPage movieDetailsPage = new MovieDetailsPage(selectedMovie.MovieID);
+                    movieDetailsPage.ShowDialog();
                 }
-                else
-                {
-                    MessageBox.Show("Selected movie not found.", "Error",MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-
-                
             }
             
         }

@@ -17,7 +17,7 @@
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                    <Image Source="{Binding MovieImg}" Width="100" Height="100" Margin="5" MouseUp="DisplayMovieDetails" Tag="{Binding MovieID }" />
+                    <Image Source="{Binding MovieImg}" Width="140" Height="140" Margin="5" MouseUp="DisplayMovieDetails" Tag="{Binding MovieID }" />
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
