@@ -39,7 +39,7 @@ namespace OOD_Movie_Project
 
         public string Director { get; set; }
 
-        public int Date { get; set; }
+        public int DateTime { get; set; }
 
         public string Descriptions { get; set; }
 
