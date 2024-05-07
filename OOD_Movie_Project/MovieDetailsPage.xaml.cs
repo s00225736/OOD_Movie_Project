@@ -34,12 +34,12 @@ namespace OOD_Movie_Project
 
         public void LoadMovieDetails()
         {
-            var movie = _db.Movies.FirstOrDefault(m => m.MovieID == _movieID);
-            if(movie != null)
+            var Movie = _db.Movies.FirstOrDefault(m => m.MovieID == _movieID);
+            if(Movie != null)
             {
-                imgPoster.Source = new BitmapImage(new Uri(movie.MovieImg, UriKind.RelativeOrAbsolute));
-                tblkName.Text = movie.MovieName;
-                tblkDescription.Text = movie.Descriptions;
+                imgPoster.Source = new BitmapImage(new Uri(Movie.MovieImg, UriKind.RelativeOrAbsolute));
+                tblkName.Text = Movie.MovieName;
+                tblkDescription.Text = Movie.Descriptions;
 
                 var reviews = _db.MovieReviews.Where(r => r.MovieID == _movieID).ToList();
                 StringBuilder sb = new StringBuilder();
@@ -47,7 +47,8 @@ namespace OOD_Movie_Project
                 {
                     sb.AppendLine($"{review.ReviewerName}: {review.ReviewDesc}");
                 }
-                tblkReviews.Text = sb.ToString();
+                tblkReviewsName.Text = sb.ToString();
+                tblkReviewDecs.Text = sb.ToString();
             }
         }
 

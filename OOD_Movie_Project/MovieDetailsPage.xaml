@@ -8,10 +8,10 @@
         Title="MovieDetailsPage" Height="350" Width="600"
         WindowStartupLocation="CenterScreen">
     <Grid>
-        <Image x:Name="imgPoster" HorizontalAlignment="Left" Height="157" Margin="18,10,0,0" VerticalAlignment="Top" Width="97" Source="{Binding MovieImg}"/>
-        <TextBlock x:Name="tblkName" HorizontalAlignment="Left" Height="40" Margin="146,10,0,0" TextWrapping="Wrap" Text="{Binding MovieName}" VerticalAlignment="Top" Width="180"/>
-        <TextBlock x:Name="tblkDescription" HorizontalAlignment="Left" Height="104" Margin="146,72,0,0" TextWrapping="Wrap" Text="{Binding Description}" VerticalAlignment="Top" Width="180"/>
-        <TextBlock x:Name="tblkReviews" HorizontalAlignment="Left" Height="283" Margin="376,30,0,0" TextWrapping="Wrap" Text="{Binding Reviews}" VerticalAlignment="Top" Width="214"/>
-
+        <Image x:Name="imgPoster" HorizontalAlignment="Left" Height="177" Margin="24,30,0,0" VerticalAlignment="Top" Width="103" Tag="{Binding MovieID }" Source="{Binding MovieImg}"/>
+        <TextBlock x:Name="tblkName" HorizontalAlignment="Left" Height="40" Margin="146,30,0,0" TextWrapping="Wrap" Tag="{Binding MovieID}" Text="{Binding MovieName}" VerticalAlignment="Top" Width="180"/>
+        <TextBlock x:Name="tblkDescription" HorizontalAlignment="Left" Height="118" Margin="146,97,0,0" TextWrapping="Wrap" Tag="{Binding MovieID}" Text="{Binding Description}" VerticalAlignment="Top" Width="180"/>
+        <TextBlock x:Name="tblkReviewsName" HorizontalAlignment="Left" Height="40" Margin="331,30,0,0" TextWrapping="Wrap" Tag="{Binding MovieID}" Text="{Binding ReviewerName}" VerticalAlignment="Top" Width="228"/>
+        <TextBlock x:Name="tblkReviewDecs" HorizontalAlignment="Left" Height="215" Margin="331,97,0,0" TextWrapping="Wrap" Tag="{Binding MovieID}" Text="{Binding ReviewDecs}" VerticalAlignment="Top" Width="228"/>
     </Grid>
 </Window>

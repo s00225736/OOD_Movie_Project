@@ -16,13 +16,13 @@ using System.Windows.Shapes;
 namespace OOD_Movie_Project
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MainWindow.xamlz
     /// </summary>
     public partial class MainWindow : Window
     {
         public List<Movies> AllMovies { get; set; }
 
-        //MovieData db = new MovieData();
+        MovieData db = new MovieData();
 
         public MainWindow()
         {
@@ -58,9 +58,9 @@ namespace OOD_Movie_Project
             AllMovies.Add(m10);
         }
 
-        private void DisplayMovieDetails(object sender, MouseButtonEventArgs e)
+       private void DisplayMovieDetails(object sender, MouseButtonEventArgs e)
         {
-            Image selectedImage = sender as Image;
+            Image selectedImage = (Image)sender;
 
             if (selectedImage != null && selectedImage.Tag != null)
             {
@@ -73,7 +73,8 @@ namespace OOD_Movie_Project
                     movieDetailsPage.ShowDialog();
                 }
             }
-            
+
         }
+
     }
 }
